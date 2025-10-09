@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <title>Këmbimi Valutor</title>
+</head>
+<body>
+    <h1>Këmbimi Valutor Euro ↔ Lek</h1>
+    <form action="convert.php" method="post">
+        <label for="amount">Shuma:</label>
+        <input type="number" name="amount" id="amount" step="0.01" required>
+
+        <label for="direction">Zgjedh drejtimin:</label>
+        <select name="direction" id="direction">
+            <option value="euro_to_lek">Euro në Lek</option>
+            <option value="lek_to_euro">Lek në Euro</option>
+        </select>
+
+        <button type="submit">Konverto</button>
+    </form>
+</body>
+</html>
