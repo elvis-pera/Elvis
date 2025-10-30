@@ -2,18 +2,30 @@
 <html lang="sq">
 <head>
     <meta charset="UTF-8">
-    <title>Këmbimi Valutor</title>
+    <title>Konvertues Valutor</title>
 </head>
 <body>
-    <h1>Këmbimi Valutor Euro ↔ Lek</h1>
-    <form action="convert.php" method="post">
+    <h1>Konvertues Valutor</h1>
+    <form action="convert.php" method="POST">
         <label for="amount">Shuma:</label>
-        <input type="number" name="amount" id="amount" step="0.01" required>
+        <input type="number" step="0.01" name="amount" id="amount" required>
 
-        <label for="direction">Zgjedh drejtimin:</label>
-        <select name="direction" id="direction">
-            <option value="euro_to_lek">Euro në Lek</option>
-            <option value="lek_to_euro">Lek në Euro</option>
+        <label for="from">Nga:</label>
+        <select name="from" id="from" required>
+            <option value="ALL">Lekë (ALL)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="USD">Dollar (USD)</option>
+            <option value="GBP">Paund (GBP)</option>
+            <option value="CHF">Frang Zviceran (CHF)</option>
+        </select>
+
+        <label for="to">Në:</label>
+        <select name="to" id="to" required>
+            <option value="ALL">Lekë (ALL)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="USD">Dollar (USD)</option>
+            <option value="GBP">Paund (GBP)</option>
+            <option value="CHF">Frang Zviceran (CHF)</option>
         </select>
 
         <button type="submit">Konverto</button>
